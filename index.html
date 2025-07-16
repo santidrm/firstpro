@@ -7,15 +7,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap');
         
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             background-color: #FFF0F5;
+            line-height: 1.6;
+            color: #4a4a4a;
         }
         
         .title-font {
             font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            letter-spacing: 0.5px;
         }
         
         .pink-gradient {
@@ -80,8 +84,8 @@
     <section id="home" class="py-16 px-6" style="background-color: #FFF0F5;">
         <div class="container mx-auto flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-pink-600 title-font mb-6">Capture Your Special Moments</h1>
-                <p class="text-gray-700 text-lg mb-8">Professional photography services with a feminine touch. Let me help you preserve your precious memories in the most beautiful way.</p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-medium text-pink-600 title-font mb-6 leading-tight">Capture Your <span class="italic font-normal">Special</span> Moments</h1>
+                <p class="text-gray-700 text-lg mb-8 font-light tracking-wide">Professional photography services with a feminine touch. Let me help you preserve your precious memories in the most beautiful way.</p>
                 <div class="flex space-x-4">
                     <a href="#pricing" class="px-8 py-3 rounded-full pink-btn text-white font-semibold shadow-lg">View Packages</a>
                     <a href="#contact" class="px-8 py-3 rounded-full border-2 border-pink-500 text-pink-600 font-semibold hover:bg-pink-100 transition">Contact Me</a>
@@ -98,8 +102,8 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="py-16 px-6 bg-pink-50">
         <div class="container mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-pink-600 title-font mb-4">My Portfolio</h2>
-            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Explore my recent work across different photography styles and themes.</p>
+            <h2 class="text-3xl md:text-4xl font-medium text-center text-pink-600 title-font mb-4 tracking-wide">My Portfolio</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12 font-light tracking-wider">Explore my recent work across different photography styles and themes.</p>
             
             <div class="photo-grid">
                 <!-- Photo 1 -->
@@ -154,9 +158,9 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <!-- Basic Package -->
                 <div class="price-card bg-white rounded-xl p-8 text-center">
-                    <h3 class="text-2xl font-bold text-pink-600 mb-4">Basic</h3>
-                    <div class="text-4xl font-bold text-gray-800 mb-6">$250</div>
-                    <ul class="space-y-3 mb-8 text-gray-600">
+                    <h3 class="text-2xl font-medium text-pink-600 mb-4 tracking-wide">Basic</h3>
+                    <div class="text-4xl font-normal text-gray-800 mb-6 font-serif">$250</div>
+                    <ul class="space-y-3 mb-8 text-gray-600 font-light tracking-wide">
                         <li>1 hour photo session</li>
                         <li>15 edited digital images</li>
                         <li>Online gallery</li>
@@ -226,7 +230,7 @@
                             <p class="text-sm text-gray-500">Wedding Client</p>
                         </div>
                     </div>
-                    <p class="text-gray-600">"The photos from our wedding day are absolutely stunning! Pink Lens captured every special moment perfectly. The quality and attention to detail was beyond our expectations."</p>
+                    <p class="text-gray-600 italic font-light tracking-wide leading-relaxed">"The photos from our wedding day are absolutely stunning! Pink Lens captured every special moment perfectly. The quality and attention to detail was beyond our expectations."</p>
                     <div class="mt-3 text-pink-400">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -271,8 +275,8 @@
                     <div class="md:w-1/2 p-8">
                         <form>
                             <div class="mb-4">
-                                <label for="name" class="block text-gray-700 mb-2">Your Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300">
+                                <label for="name" class="block text-gray-700 mb-2 font-light tracking-wide">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 font-light tracking-wide">
                             </div>
                             <div class="mb-4">
                                 <label for="email" class="block text-gray-700 mb-2">Email Address</label>
