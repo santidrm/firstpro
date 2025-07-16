@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Lens Photography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFF0F5;
+        }
+        
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .pink-gradient {
+            background: linear-gradient(135deg, #FFC0CB 0%, #FF69B4 100%);
+        }
+        
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .photo-item {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .photo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .price-card {
+            transition: all 0.3s ease;
+            border: 2px solid #FF69B4;
+        }
+        
+        .price-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+        }
+        
+        .pink-btn {
+            background-color: #FF69B4;
+            transition: all 0.3s ease;
+        }
+        
+        .pink-btn:hover {
+            background-color: #FF1493;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="pink-gradient py-4 px-6 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white title-font text-2xl md:text-3xl font-bold">Pink Lens</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-white hover:text-pink-200 transition">Home</a>
+                <a href="#portfolio" class="text-white hover:text-pink-200 transition">Portfolio</a>
+                <a href="#pricing" class="text-white hover:text-pink-200 transition">Pricing</a>
+                <a href="#contact" class="text-white hover:text-pink-200 transition">Contact</a>
+            </div>
+            <button class="md:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-16 px-6" style="background-color: #FFF0F5;">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-pink-600 title-font mb-6">Capture Your Special Moments</h1>
+                <p class="text-gray-700 text-lg mb-8">Professional photography services with a feminine touch. Let me help you preserve your precious memories in the most beautiful way.</p>
+                <div class="flex space-x-4">
+                    <a href="#pricing" class="px-8 py-3 rounded-full pink-btn text-white font-semibold shadow-lg">View Packages</a>
+                    <a href="#contact" class="px-8 py-3 rounded-full border-2 border-pink-500 text-pink-600 font-semibold hover:bg-pink-100 transition">Contact Me</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-pink-300 shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1554080351-a76e4fd09687?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Photographer" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 px-6 bg-pink-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-pink-600 title-font mb-4">My Portfolio</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Explore my recent work across different photography styles and themes.</p>
+            
+            <div class="photo-grid">
+                <!-- Photo 1 -->
+                <div class="photo-item rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Portrait" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="text-xl font-semibold text-pink-600">Elegant Portraits</h3>
+                        <p class="text-gray-600">Classic portrait session</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 2 -->
+                <div class="photo-item rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Wedding" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="text-xl font-semibold text-pink-600">Wedding Bliss</h3>
+                        <p class="text-gray-600">Romantic wedding photography</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 3 -->
+                <div class="photo-item rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80" alt="Fashion" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="text-xl font-semibold text-pink-600">Fashion Editorial</h3>
+                        <p class="text-gray-600">Stylish fashion photography</p>
+                    </div>
+                </div>
+                
+                <!-- Photo 4 -->
+                <div class="photo-item rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1503185912284-5271ff81b9a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Maternity" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h3 class="text-xl font-semibold text-pink-600">Maternity Magic</h3>
+                        <p class="text-gray-600">Beautiful pregnancy photos</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="px-8 py-3 rounded-full pink-btn text-white font-semibold shadow-lg inline-block">View Full Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 px-6" style="background-color: #FFF0F5;">
+        <div class="container mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-pink-600 title-font mb-4">Pricing Packages</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Choose the perfect package for your photography needs. All packages include high-resolution edited images.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Basic Package -->
+                <div class="price-card bg-white rounded-xl p-8 text-center">
+                    <h3 class="text-2xl font-bold text-pink-600 mb-4">Basic</h3>
+                    <div class="text-4xl font-bold text-gray-800 mb-6">$250</div>
+                    <ul class="space-y-3 mb-8 text-gray-600">
+                        <li>1 hour photo session</li>
+                        <li>15 edited digital images</li>
+                        <li>Online gallery</li>
+                        <li>1 outfit change</li>
+                        <li>1 location</li>
+                    </ul>
+                    <a href="#contact" class="px-6 py-2 rounded-full pink-btn text-white font-semibold inline-block">Book Now</a>
+                </div>
+                
+                <!-- Popular Package -->
+                <div class="price-card bg-white rounded-xl p-8 text-center transform md:-translate-y-4 shadow-xl">
+                    <div class="absolute top-0 right-0 bg-pink-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">MOST POPULAR</div>
+                    <h3 class="text-2xl font-bold text-pink-600 mb-4">Premium</h3>
+                    <div class="text-4xl font-bold text-gray-800 mb-6">$450</div>
+                    <ul class="space-y-3 mb-8 text-gray-600">
+                        <li>2 hour photo session</li>
+                        <li>30 edited digital images</li>
+                        <li>Online gallery + prints</li>
+                        <li>3 outfit changes</li>
+                        <li>2 locations</li>
+                        <li>10% discount on next session</li>
+                    </ul>
+                    <a href="#contact" class="px-6 py-2 rounded-full pink-btn text-white font-semibold inline-block">Book Now</a>
+                </div>
+                
+                <!-- Deluxe Package -->
+                <div class="price-card bg-white rounded-xl p-8 text-center">
+                    <h3 class="text-2xl font-bold text-pink-600 mb-4">Deluxe</h3>
+                    <div class="text-4xl font-bold text-gray-800 mb-6">$750</div>
+                    <ul class="space-y-3 mb-8 text-gray-600">
+                        <li>Full day coverage</li>
+                        <li>60+ edited digital images</li>
+                        <li>Premium album included</li>
+                        <li>Unlimited outfit changes</li>
+                        <li>Multiple locations</li>
+                        <li>Priority booking</li>
+                        <li>20% discount on next session</li>
+                    </ul>
+                    <a href="#contact" class="px-6 py-2 rounded-full pink-btn text-white font-semibold inline-block">Book Now</a>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-pink-100 rounded-xl p-8 max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-pink-600 mb-4 text-center">Custom Packages</h3>
+                <p class="text-gray-700 text-center mb-6">Need something special? I offer custom packages for weddings, events, and commercial photography. Contact me to discuss your specific requirements.</p>
+                <div class="text-center">
+                    <a href="#contact" class="px-8 py-3 rounded-full border-2 border-pink-500 text-pink-600 font-semibold hover:bg-pink-200 transition inline-block">Request Custom Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 px-6 bg-pink-50">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-pink-600 title-font mb-12">Client Testimonials</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-pink-600">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-500">Wedding Client</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The photos from our wedding day are absolutely stunning! Pink Lens captured every special moment perfectly. The quality and attention to detail was beyond our expectations."</p>
+                    <div class="mt-3 text-pink-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-pink-600">Emily Rodriguez</h4>
+                            <p class="text-sm text-gray-500">Maternity Client</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"I was nervous about my maternity shoot, but Pink Lens made me feel so comfortable and beautiful. The photos are magical and will be treasured forever. Worth every penny!"</p>
+                    <div class="mt-3 text-pink-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6" style="background-color: #FFF0F5;">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-pink-600 title-font mb-4">Let's Work Together</h2>
+            <p class="text-center text-gray-600 mb-12">Ready to book a session or have questions? Send me a message!</p>
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300">
+                            </div>
+                            <div class="mb-4">
+                                <label for="package" class="block text-gray-700 mb-2">Package Interest</label>
+                                <select id="package" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300">
+                                    <option value="">Select a package</option>
+                                    <option value="basic">Basic</option>
+                                    <option value="premium">Premium</option>
+                                    <option value="deluxe">Deluxe</option>
+                                    <option value="custom">Custom</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-6 py-3 rounded-full pink-btn text-white font-semibold shadow-lg">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="md:w-1/2 p-8 bg-pink-50 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-pink-600 mb-4">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope text-pink-500 mt-1 mr-4"></i>
+                                <div>
+                                    <p class="text-gray-600">Email</p>
+                                    <p class="font-semibold">hello@pinklens.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-phone-alt text-pink-500 mt-1 mr-4"></i>
+                                <div>
+                                    <p class="text-gray-600">Phone</p>
+                                    <p class="font-semibold">(555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt text-pink-500 mt-1 mr-4"></i>
+                                <div>
+                                    <p class="text-gray-600">Studio Location</p>
+                                    <p class="font-semibold">123 Pink Avenue, Photography City</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="text-xl font-semibold text-pink-600 mb-4">Follow Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-pink-200 flex items-center justify-center text-pink-600 hover:bg-pink-300 transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-pink-200 flex items-center justify-center text-pink-600 hover:bg-pink-300 transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-pink-200 flex items-center justify-center text-pink-600 hover:bg-pink-300 transition">
+                                    <i class="fab fa-pinterest-p"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pink-gradient py-8 px-6 text-white">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-white title-font text-2xl font-bold">Pink Lens</a>
+                    <p class="mt-2 text-pink-100">Capturing life's beautiful moments</p>
+                </div>
+                <div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
+                    <a href="#home" class="hover:text-pink-200 transition">Home</a>
+                    <a href="#portfolio" class="hover:text-pink-200 transition">Portfolio</a>
+                    <a href="#pricing" class="hover:text-pink-200 transition">Pricing</a>
+                    <a href="#contact" class="hover:text-pink-200 transition">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-pink-300 mt-8 pt-8 text-center text-pink-200">
+                <p>&copy; 2023 Pink Lens Photography. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('button.md\\:hidden');
+            const mobileMenu = document.querySelector('.md\\:flex.space-x-8');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex', 'flex-col', 'absolute', 'top-16', 'right-6', 'bg-pink-600', 'p-4', 'rounded-lg', 'shadow-lg', 'space-y-4', 'space-x-0');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'right-6', 'bg-pink-600', 'p-4', 'rounded-lg', 'shadow-lg', 'space-y-4', 'space-x-0');
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenu.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'right-6', 'bg-pink-600', 'p-4', 'rounded-lg', 'shadow-lg', 'space-y-4', 'space-x-0');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
